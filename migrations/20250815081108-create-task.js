@@ -10,12 +10,13 @@ module.exports = {
       },
       project_id: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,  // Ubah menjadi nullable untuk mendukung SET NULL
         references: {
           model: 'projects',
           key: 'id',
         },
-        onDelete: 'CASCADE',
+        onDelete: 'SET NULL',  // Jika project dihapus, project_id menjadi NULL
+        onUpdate: 'CASCADE',
       },
       name: {
         type: Sequelize.STRING(255),
@@ -32,10 +33,12 @@ module.exports = {
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,
+        defaultValue: Sequelize.NOW,
       },
       updated_at: {
         type: Sequelize.DATE,
         allowNull: false,
+        defaultValue: Sequelize.NOW,
       },
     });
   },
