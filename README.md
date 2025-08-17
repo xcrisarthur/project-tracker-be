@@ -54,8 +54,3 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini:
      node server.js
      ```
 
-Setelah langkah-langkah di atas selesai, aplikasi backend Anda sudah siap berjalan.
-
----
-
-Dengan teks ini, langkah-langkah untuk menjalankan proyek menjadi lebih terstruktur dan mudah diikuti.
